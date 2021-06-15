@@ -15,7 +15,7 @@ module.exports = (app) => {
     //   }
     // );
    
-    app.post('/api/notes', (req, res) => {
+    app.post("/api/notes", (req, res) => {
       console.log(tableNotes);
       console.log(req.body);
       req.body.id = nanoid(10);
@@ -23,6 +23,21 @@ module.exports = (app) => {
       console.log(tableNotes);
       updateNotes(tableNotes)
       res.json(tableNotes)
+    })
+
+    app.delete('/api/notes/:id', (req, res) => {
+      let targetID = req.params.id;
+      console.log(req.params.id)
+
+      for (let i = 0; i < tableNotes.length; i++) {
+        if (tableNotes[i].id === targetID) {
+          tableNotes.splice(i, 1)
+          updateNotes(tableNotes)
+          res.json(tableNotes);
+        }
+       
+      }
+
     })
   };
 
