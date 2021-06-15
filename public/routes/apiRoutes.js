@@ -1,4 +1,4 @@
-const tableNotes = require('../../../../db/db.json');
+const tableNotes = require('../../db/db.json');
 
 module.exports = (app) => {
     
@@ -9,8 +9,7 @@ module.exports = (app) => {
     app.post('/api/notes', (req, res) => {
 
       
-        tableNotes.push(req.body);
-        res.json(true);
+                res.json(true);
      
       }
     );
