@@ -27,7 +27,7 @@ This is the week 11 Homework
 
     Install node, and do your npm to add express and nonoid. When it runs you'll see the default homepage.
     
-[!Main_Page](./assets/mainPage.PNG)
+[!Main_Page](./assets/img/mainPage.PNG)
 
 
-[!Note_Page](./assets/notePage.PNG)]\
+[!Note_Page](./assets/img/notePage.PNG)]
