@@ -22,3 +22,12 @@ This is the week 11 Homework
 
     The main goal was to get one that was working. The trickiest problem was I ran into an error from
     how I initially set up the branches. I had to change that a few times for it to work better.
+
+6.0 In use:
+
+    Install node, and do your npm to add express and nonoid. When it runs you'll see the default homepage.
+    
+[!Main_Page](./assets/mainPage.PNG)
+
+
+[!Note_Page](./assets/notePage.PNG)]\
