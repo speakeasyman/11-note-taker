@@ -9,12 +9,9 @@ module.exports = (app) => {
     });
     // This takes the information, and updates the db.json file
     // with the new notes
-    app.post("/api/notes", (req, res) => {
-      console.log(tableNotes);
-      console.log(req.body);
+    app.post("/api/notes", (req, res) => {     
       req.body.id = nanoid(10);
       tableNotes.push(req.body);
-      console.log(tableNotes);
       updateNotes(tableNotes)
       res.json(tableNotes)
     })
@@ -25,8 +22,7 @@ module.exports = (app) => {
     // db.json file.
     app.delete('/api/notes/:id', (req, res) => {
       let targetID = req.params.id;
-      console.log(req.params.id)
-      for (let i = 0; i < tableNotes.length; i++) {
+        for (let i = 0; i < tableNotes.length; i++) {
         if (tableNotes[i].id === targetID) {
           tableNotes.splice(i, 1)
           updateNotes(tableNotes)
